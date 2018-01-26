@@ -28,7 +28,7 @@ class Blog extends Component {
                                     exact
                                     // activeStyle={{ color: 'purple', textDecoration: 'underline'}}
                                     // activeClasName="my-active"
-                                        >Home</NavLink>
+                                        >Posts</NavLink>
                             </li>
                             <li>
                                 <NavLink
