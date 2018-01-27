@@ -9,7 +9,7 @@ class NewPost extends Component {
         title: '',
         content: '',
         author: 'Max',
-        submitted: false
+        // submitted: false
     }
 
 
@@ -25,13 +25,14 @@ class NewPost extends Component {
         axios.post('/posts', data)
             .then(response => {
                 console.log(response);
-                this.setState({submitted: true})
+                this.props.history.push('/posts')
+                // this.setState({submitted: true})
             });
     }
 
     render () {
         return (
-                this.state.submitted ? <Redirect to="/posts" /> : (
+                // this.state.submitted ? <Redirect to="/posts" /> : (
             <div className="NewPost">
                 <h1>Add a Post</h1>
                 <label>Title</label>
@@ -45,7 +46,7 @@ class NewPost extends Component {
                 </select>
                 <button onClick={this.postDataHandler}>Add Post</button>
             </div>
-                )
+                // )
         );
     }
 }
