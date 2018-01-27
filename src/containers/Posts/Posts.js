@@ -52,7 +52,6 @@ class Posts extends Component {
                             clicked={() => this.postSelectedHandler(post.id)} />
             });
         }
-            console.log(this.props);
         return (
             <div>
                 <section className="Posts">
