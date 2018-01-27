@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, NavLink, Switch, Redirect } from 'react-router-dom'
-
+import cat from '../../assets/404.jpeg';
 
 import './Blog.css';
 
@@ -43,7 +43,8 @@ class Blog extends Component {
                 <Switch>
                     { this.state.auth ? <Route path="/new-post"  component={NewPost} /> : null }
                     <Route path="/posts"  component={Posts} />
-                    <Redirect from="/" to="/posts"/>
+                    <Route render={() => <img src={cat} alt=""/> }/>
+                    {/*<Redirect from="/" to="/posts"/>*/}
                     {/*<Route path="/"  component={Posts} />*/}
 
 
