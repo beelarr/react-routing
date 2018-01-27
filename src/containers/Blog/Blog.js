@@ -6,8 +6,6 @@ import './Blog.css';
 
 import Posts from '../../containers/Posts/Posts'
 import NewPost from "../NewPost/NewPost";
-import Post from '../../components/Post/Post';
-import FullPost from '../../containers/FullPost/FullPost'
 
 
 class Blog extends Component {
@@ -24,7 +22,7 @@ class Blog extends Component {
                         <ul>
                             <li>
                                 <NavLink
-                                    to="/"
+                                    to="/posts"
                                     exact
                                     // activeStyle={{ color: 'purple', textDecoration: 'underline'}}
                                     // activeClasName="my-active"
@@ -39,10 +37,9 @@ class Blog extends Component {
                         </ul>
                     </nav>
                 </header>
-                    <Route path="/"  exact component={Posts} />
                 <Switch>
                     <Route path="/new-post"  component={NewPost} />
-                    <Route path="/:id"  exact component={FullPost} />
+                    <Route path="/posts"  component={Posts} />
                 </Switch>
 
 
